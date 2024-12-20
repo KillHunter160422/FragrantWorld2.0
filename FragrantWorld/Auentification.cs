@@ -3,10 +3,10 @@ using FragrantWorld.Services;
 
 namespace FragrantWorld
 {
-    
+
     public partial class FW_Autorization : Form
     {
- 
+
         private string userRole;
         public FW_Autorization()
         {
@@ -41,6 +41,20 @@ namespace FragrantWorld
             shop.Show();
             this.Hide();
 
+        }
+
+        private void FW_Autorization_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Вы уверены что хотите покинуть приложение?", "Выход", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                Environment.Exit(0);
+            }
         }
     }
 }

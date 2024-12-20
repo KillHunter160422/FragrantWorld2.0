@@ -94,6 +94,7 @@
             Name = "FW_Autorization";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Аутентификация";
+            FormClosing += FW_Autorization_FormClosing;
             Load += FW_Autorization_Load;
             ResumeLayout(false);
             PerformLayout();

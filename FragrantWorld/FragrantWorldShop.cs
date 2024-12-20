@@ -107,11 +107,11 @@ namespace FragrantWorld
 
         private void logOut_Click(object sender, EventArgs e)
         {
-            // Скрываем текущую форму
+           
             this.Hide();
 
-            // Очищаем данные сессии (например, UserId, UserRole)
-            userId = null; // Устанавливаем значение по умолчанию
+          
+            userId = null; 
             userRole = string.Empty;
 
             SignForm sign = new();
@@ -169,15 +169,15 @@ namespace FragrantWorld
 
         private void dataGridViewProducts_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            // Проверяем, что текущая ячейка является кнопкой
+            
             if (dataGridViewProducts.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 dataGridViewProducts.Columns[e.ColumnIndex].Name == "OrderButton")
             {
-                // Устанавливаем цвет фона кнопки
+                
                 e.CellStyle.BackColor = Color.White;
-                // Устанавливаем цвет текста кнопки
+                
                 e.CellStyle.ForeColor = Color.FromArgb(204, 102, 0); 
-                // Устанавливаем шрифт текста кнопки
+                
                 e.CellStyle.Font = new Font("Comic Sans MS", 9);
             }
         }

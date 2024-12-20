@@ -155,6 +155,7 @@
             logOut.Name = "logOut";
             logOut.Size = new Size(237, 26);
             logOut.Text = "Выйти";
+            logOut.Click += logOut_Click;
             // 
             // cart
             // 
